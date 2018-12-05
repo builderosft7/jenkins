@@ -1,0 +1,23 @@
+JOB DSL PLUGIN
+1. developer udates script locally
+2. developer pushes changes
+3. SCM change triggers seed job (configured manually)
+4. seed job runs DSL
+5. seed job updates/creates/deletes
+
+Freestyle project
+add build step => 
+
+4.times {
+  job('job' + it) {}
+}
+
+-------------------------------------------------------
+
+JENKINS JOB DSL PLAYGROUND
+http://job-dsl.herokuapp.com/
+
+-------------------------------------------------------
+
+JENKINS JOB DSL COMMANDS
+https://github.com/jenkinsci/job-dsl-plugin/wiki/Job-DSL-Commands
