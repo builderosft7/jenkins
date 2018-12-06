@@ -10,3 +10,10 @@
 9. payload URL => http://JENKINS_IP:8080/github-webhook/
 10. content type => application-json
 11. save the webhook
+
+echo "COMMIT_ID: ${GIT_COMMIT}"
+token=9aef246338d9cf26bec48082921eeaab6c422f8d
+git tag v1.0.${BUILD_NUMBER} ${GIT_COMMIT}
+git push https://${token}@github.com/elijb/jenkins.git v1.0.${BUILD_NUMBER}
+
+* to generate token : https://github.com/settings/tokens
